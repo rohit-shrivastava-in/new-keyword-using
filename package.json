@@ -1,0 +1,16 @@
+{
+  "name": "new-keyword-using",
+  "version": "1.0.0",
+  "description": "NEW Way To Create Variables In JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "local": "nodemon src/server.ts"
+  },
+  "author": "Rohit SHRIVASTAVA",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
