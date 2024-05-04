@@ -5,11 +5,12 @@ Symbol.dispose ??= Symbol("Symbol.dispose");
 Symbol.asyncDispose ??= Symbol("Symbol.asyncDispose")
 export function openFile(path: string) {
   const file = fs.openSync(`files/${path}`, "w+");
+  console.log("+ ", path)
 
   return {
     handle: file,
     [Symbol.dispose]() {
-      console.log("Dispose");
+      console.log("- ", path);
       fs.closeSync(file);
     }
   }

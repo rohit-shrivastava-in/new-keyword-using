@@ -1,14 +1,13 @@
 import * as fs from 'fs'
+import { openFile } from './openFile';
 
 function writeFile(path: string) {
-  let file = fs.openSync(`src/${path}`, "w+");
+  using file = openFile(path);
 
   if (path.includes('temp')) {
     return
   }
-
-  fs.writeFileSync(file, "Permanent \n");
-  fs.closeSync(file);
+  fs.writeFileSync(file.handle, "Permanent \n");
 }
 
 writeFile("a.txt");
